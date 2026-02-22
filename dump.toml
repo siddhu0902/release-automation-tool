@@ -1,0 +1,34 @@
+#discount
+Count = 0
+while(Count < 5):
+    customer = input(("Enter the customer name:"))
+    bill_amount = int(input("Enter the gross bill amount:"))
+    discount = 0
+    if bill_amount > 1000 and bill_amount <=1500:
+        discount = bill_amount*0.10
+        net = bill_amount - discount
+    elif bill_amount >1500 and bill_amount <=2000:
+        discount = bill_amount*0.15
+        net = bill_amount - discount
+    elif bill_amount >2000 and bill_amount <=5000:
+        
+        discount = bill_amount*0.20
+        net = bill_amount - discount
+    elif bill_amount >5000:
+        discount = bill_amount*0.30
+        net = bill_amount - discount
+    else:
+        net = bill_amount
+    print("customer name:",customer)
+    print("Gross Bill amount:",bill_amount)
+    print("Discount:",discount)
+    print("Net bill amount:",net)        
+Count = Count + 1
+# Program to calculate discount based on bill amount for 5 customers    
+
+# Example usage
+#atm = ATM(5000)  # Initial balance ₹5000
+#atm.check_balance()
+#atm.withdraw(6000)  # Should show error
+#atm.withdraw(2000)  # Should succeed
+#atm.withdraw(4000)  # Should show error
